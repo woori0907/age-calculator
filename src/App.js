@@ -1,6 +1,5 @@
 import "./App.css";
 import AgeCalc from "./components/AgeCalc";
-import InputArea from "./components/InputArea";
 
 function App() {
   return (

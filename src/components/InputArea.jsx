@@ -1,17 +1,28 @@
 import React, { useRef } from "react";
 
-const InputArea = () => {
+const InputArea = ({ date, setDate }) => {
   const inputDay = useRef();
   const inputMonth = useRef();
   const inputYear = useRef();
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    console.log(
-      inputDay.current.value,
-      inputMonth.current.value,
-      inputYear.current.value
-    );
+    let tempDate = { ...date };
+
+    tempDate = {
+      day: inputDay.current.value
+        ? inputDay.current.value
+        : inputDay.current.classList.add("invalid"),
+      month: inputMonth.current.value
+        ? inputMonth.current.value
+        : inputMonth.current.classList.add("invalid"),
+      year: inputYear.current.value
+        ? inputYear.current.value
+        : inputYear.current.classList.add("invalid"),
+    };
+    if ((tempDate.day, tempDate.month, tempDate.year !== undefined)) {
+      setDate(tempDate);
+    }
   };
   return (
     <div>
