@@ -17,17 +17,16 @@ const ResultArea = ({ date }) => {
     setDay(tDay);
     setMonth(tMonth);
     setYear(tYear);
-    
   };
-  console.log(isNaN(rYear))
+  console.log(isNaN(rYear));
   useEffect(() => {
     getAge();
   }, [date]);
   return (
     <div>
-      <p>{isNaN(rYear) ? '--' : rYear}Years</p>
-      <p>{isNaN(rMonth) ? '--' : rMonth}Months</p>
-      <p>{isNaN(rDay) ? '--' : rDay}Days</p>
+      <p>{isNaN(rYear) ? "--" : rYear}Years</p>
+      <p>{isNaN(rMonth) ? "--" : rMonth}Months</p>
+      <p>{isNaN(rDay) ? "--" : rDay}Days</p>
     </div>
   );
 };

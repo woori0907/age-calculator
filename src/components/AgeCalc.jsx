@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import InputArea from "./InputArea";
 import ResultArea from "./ResultArea";
+import styles from "./AgeCalc.module.css";
 
 const AgeCalc = () => {
   const [date, setDate] = useState({
@@ -9,7 +10,7 @@ const AgeCalc = () => {
     year: 0,
   });
   return (
-    <div>
+    <div className={styles.calc_wrap}>
       <InputArea date setDate={setDate} />
       <ResultArea date={date} />
     </div>
