@@ -1,0 +1,10 @@
+.calc_wrap {
+  background-color: var(--color--neutral-white);
+  width: 90%;
+  height: 640px;
+  border-radius: 20px 20px 60px 20px;
+  display: flex;
+  padding: 40px 20px;
+  flex-direction: column;
+  margin: 0 auto;
+}
