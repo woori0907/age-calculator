@@ -58,7 +58,7 @@ const InputArea = ({ date, setDate }) => {
               />
             </div>
           </div>
-          <input type="submit" value="Submit" />
+          <input type="submit" value=" " className={styles.input_submit} />
         </form>
       </section>
     </div>

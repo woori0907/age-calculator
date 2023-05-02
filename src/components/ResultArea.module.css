@@ -1,0 +1,13 @@
+.result_wrap {
+  text-align: left;
+  margin-top: 30px;
+}
+
+.result_text {
+  font-size: var(--font-very-large);
+  font-weight: var(--weight-extra-bold);
+}
+
+.result_value {
+  color: var(--color--prim-purple);
+}

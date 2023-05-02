@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import styles from "./ResultArea.module.css";
 
 const ResultArea = ({ date }) => {
   const { day, month, year } = date;
@@ -18,15 +19,35 @@ const ResultArea = ({ date }) => {
     setMonth(tMonth);
     setYear(tYear);
   };
-  console.log(isNaN(rYear));
   useEffect(() => {
     getAge();
   }, [date]);
   return (
-    <div>
-      <p>{isNaN(rYear) ? "--" : rYear}Years</p>
-      <p>{isNaN(rMonth) ? "--" : rMonth}Months</p>
-      <p>{isNaN(rDay) ? "--" : rDay}Days</p>
+    <div className={styles.result_wrap}>
+      <p className={styles.result_text}>
+        <i>
+          <span className={styles.result_value}>
+            {isNaN(rYear) ? "--" : rYear}
+          </span>
+          &nbsp;years
+        </i>
+      </p>
+      <p className={styles.result_text}>
+        <i>
+          <span className={styles.result_value}>
+            {isNaN(rMonth) ? "--" : rMonth}
+          </span>
+          &nbsp;months
+        </i>
+      </p>
+      <p className={styles.result_text}>
+        <i>
+          <span className={styles.result_value}>
+            {isNaN(rDay) ? "--" : rDay}
+          </span>
+          &nbsp;days
+        </i>
+      </p>
     </div>
   );
 };
