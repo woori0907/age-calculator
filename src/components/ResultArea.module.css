@@ -4,10 +4,16 @@
 }
 
 .result_text {
-  font-size: var(--font-very-large);
+  font-size: var(--font-large);
   font-weight: var(--weight-extra-bold);
 }
 
 .result_value {
   color: var(--color--prim-purple);
+}
+
+@media (min-width: 1080px) {
+  .result_text {
+    font-size: var(--font-very-large);
+  }
 }
