@@ -35,7 +35,6 @@
   padding: 20px 10px;
   font-weight: var(--weight-bold);
   margin-top: 10px;
-  margin-bottom: 40px;
 }
 
 .input_submit {
@@ -48,6 +47,19 @@
   height: 60px;
   border-radius: 50px;
   border: none;
+}
+
+input.invalid {
+  border: 1px solid var(--color--prim-light-red);
+}
+
+.alert_msg {
+  color: var(--color--prim-light-red);
+  font-size: 11px;
+  display: none;
+}
+.alert_msg.visible {
+  display: block !important;
 }
 
 @media (min-width: 1080px) {
